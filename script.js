@@ -47,6 +47,12 @@ function verificarTareas() {
   }
 }
 
-function mostrarInfo(mensaje) {
-    alert(mensaje);
+function abrirModal(titulo, texto) {
+    document.getElementById("modal-titulo").textContent = titulo;
+    document.getElementById("modal-texto").textContent = texto;
+    document.getElementById("miModal").style.display = "block";
+  }
+  
+function cerrarModal() {
+document.getElementById("miModal").style.display = "none";
 }

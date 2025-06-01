@@ -14,25 +14,25 @@
         Tarea 1:
         <label><input type="radio" name="tarea_obligatoria_1" value="si"> Sí</label>
         <label><input type="radio" name="tarea_obligatoria_1" value="no"> No</label>
-        <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
     </div>
     <div class="task" data-id="tarea2">
         Tarea 2:
         <label><input type="radio" name="tarea_obligatoria_2" value="si"> Sí</label>
         <label><input type="radio" name="tarea_obligatoria_2" value="no"> No</label>
-        <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
     </div>
     <div class="task" data-id="tarea3">
         Tarea 3:
         <label><input type="radio" name="tarea_obligatoria_3" value="si"> Sí</label>
         <label><input type="radio" name="tarea_obligatoria_3" value="no"> No</label>
-        <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
     </div>
     <div class="task" data-id="tarea4">
         Tarea 4:
         <label><input type="radio" name="tarea_obligatoria_4" value="si"> Sí</label>
         <label><input type="radio" name="tarea_obligatoria_4" value="no"> No</label>
-        <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
     </div>
 
     <form>
@@ -44,34 +44,35 @@
             <label><input type="radio" name="tarea_opcional_1" value="si"> Sí</label>
             <label><input type="radio" name="tarea_opcional_1" value="na"> NA</label>
             <label><input type="radio" name="tarea_opcional_1" value="no"> No</label>
-            <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+            <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
         </div>
         <div class="task" data-id="tarea2">
             Tarea 2:
             <label><input type="radio" name="tarea_opcional_2" value="si"> Sí</label>
             <label><input type="radio" name="tarea_opcional_2" value="na"> NA</label>
             <label><input type="radio" name="tarea_opcional_2" value="no"> No</label>
-            <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+            <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
         </div>
         <div class="task" data-id="tarea3">
             Tarea 3:
             <label><input type="radio" name="tarea_opcional_3" value="si"> Sí</label>
             <label><input type="radio" name="tarea_opcional_3" value="na"> NA</label>
             <label><input type="radio" name="tarea_opcional_3" value="no"> No</label>
-            <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
-        </div>
-        <div class="task" data-id="tarea4">
-            Tarea 4:
-            <label><input type="radio" name="tarea_opcional_4" value="si"> Sí</label>
-            <label><input type="radio" name="tarea_opcional_4" value="na"> NA</label>
-            <label><input type="radio" name="tarea_opcional_4" value="no"> No</label>
-            <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+            <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
         </div>
   </form>
 
   <button onclick="verificarTareas()">Verificar</button>
 
   <div id="resultado"></div>
+
+  <div id="miModal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <h3 id="modal-titulo"></h3>
+      <p id="modal-texto"></p>
+    </div>
+  </div>
 </body>
 <script src="script.js"></script>
 </html>
