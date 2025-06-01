@@ -18,8 +18,23 @@ body {
   
   .correcto {
     color: green;
+    font-weight: bold;
   }
   
   .incorrecto {
     color: red;
+    font-weight: bold;
+  }
+  
+  .alerta {
+    color: orange;
+    font-weight: bold;
+  }
+
+  .info-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 5px;
   }

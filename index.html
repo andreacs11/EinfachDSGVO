@@ -7,13 +7,69 @@
 <body>
   <h1>Checklist de Tareas</h1>
   <form>
-    <div class="task"><input type="checkbox" id="tarea1"> Tarea 1</div>
-    <div class="task"><input type="checkbox" id="tarea2"> Tarea 2</div>
-    <div class="task"><input type="checkbox" id="tarea3"> Tarea 3</div>
-    <div class="task"><input type="checkbox" id="tarea4"> Tarea 4</div>
+        <h2> Tareas obligatorias</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem repudiandae minus dolore ipsa quibusdam vitae dicta nihil nam ullam?
+        Ipsam error officiis nisi cumque quos sit saepe debitis cum dolor?</p>
+    <div class="task" data-id="tarea1">
+        Tarea 1:
+        <label><input type="radio" name="tarea_obligatoria_1" value="si"> Sí</label>
+        <label><input type="radio" name="tarea_obligatoria_1" value="no"> No</label>
+        <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+    </div>
+    <div class="task" data-id="tarea2">
+        Tarea 2:
+        <label><input type="radio" name="tarea_obligatoria_2" value="si"> Sí</label>
+        <label><input type="radio" name="tarea_obligatoria_2" value="no"> No</label>
+        <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+    </div>
+    <div class="task" data-id="tarea3">
+        Tarea 3:
+        <label><input type="radio" name="tarea_obligatoria_3" value="si"> Sí</label>
+        <label><input type="radio" name="tarea_obligatoria_3" value="no"> No</label>
+        <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+    </div>
+    <div class="task" data-id="tarea4">
+        Tarea 4:
+        <label><input type="radio" name="tarea_obligatoria_4" value="si"> Sí</label>
+        <label><input type="radio" name="tarea_obligatoria_4" value="no"> No</label>
+        <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+    </div>
+
+    <form>
+        <h2> Tareas Opcionales</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem repudiandae minus dolore ipsa quibusdam vitae dicta nihil nam ullam?
+            Ipsam error officiis nisi cumque quos sit saepe debitis cum dolor?</p>
+        <div class="task" data-id="tarea1">
+            Tarea 1:
+            <label><input type="radio" name="tarea_opcional_1" value="si"> Sí</label>
+            <label><input type="radio" name="tarea_opcional_1" value="na"> NA</label>
+            <label><input type="radio" name="tarea_opcional_1" value="no"> No</label>
+            <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        </div>
+        <div class="task" data-id="tarea2">
+            Tarea 2:
+            <label><input type="radio" name="tarea_opcional_2" value="si"> Sí</label>
+            <label><input type="radio" name="tarea_opcional_2" value="na"> NA</label>
+            <label><input type="radio" name="tarea_opcional_2" value="no"> No</label>
+            <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        </div>
+        <div class="task" data-id="tarea3">
+            Tarea 3:
+            <label><input type="radio" name="tarea_opcional_3" value="si"> Sí</label>
+            <label><input type="radio" name="tarea_opcional_3" value="na"> NA</label>
+            <label><input type="radio" name="tarea_opcional_3" value="no"> No</label>
+            <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        </div>
+        <div class="task" data-id="tarea4">
+            Tarea 4:
+            <label><input type="radio" name="tarea_opcional_4" value="si"> Sí</label>
+            <label><input type="radio" name="tarea_opcional_4" value="na"> NA</label>
+            <label><input type="radio" name="tarea_opcional_4" value="no"> No</label>
+            <button type="button" class="info-button" onclick="mostrarInfo('Tarea 1: esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        </div>
   </form>
 
-  <button onclick="verificarChecklist()">Verificar</button>
+  <button onclick="verificarTareas()">Verificar</button>
 
   <div id="resultado"></div>
 </body>

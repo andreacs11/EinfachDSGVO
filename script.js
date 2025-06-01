@@ -1,29 +1,52 @@
-// Lista fija de tareas que deben estar marcadas
-const idsDeTareasNecesarias = ["tarea1", "tarea2", "tarea4"];
-
-function verificarChecklist() {
-  const faltantes = [];
-
-  for (const id of idsDeTareasNecesarias) {
-    const checkbox = document.getElementById(id);
-    if (!checkbox.checked) {
-      faltantes.push(id);
-    }
-  }
-
+function verificarTareas() {
   const resultado = document.getElementById("resultado");
+  resultado.innerHTML = ""; // Limpiar mensajes anteriores
 
-  if (faltantes.length === 0) {
-    resultado.textContent = "¡Correcto! Todas las tareas necesarias están marcadas.";
-    resultado.className = "correcto";
-  } else {
-  const nombresFaltantes = [];
-    for(const id of faltantes){
-      const checkbox = document.getElementById(id);
-const nombreFaltante = checkbox.parentElement.textContent;
-      nombresFaltantes.push(nombreFaltante);
+  const errores = [];
+  const alertas = [];
+
+  // Revisar tareas obligatorias
+  for (let i = 1; i <= 4; i++) {
+    const radios = document.getElementsByName(`tarea_obligatoria_${i}`);
+    const seleccionada = Array.from(radios).find(r => r.checked);
+
+    if (seleccionada && seleccionada.value === "no") {
+      errores.push(`❌ Error en la tarea obligatoria ${i}`);
     }
-    resultado.innerHTML = `❌ Faltan por marcar: ${nombresFaltantes.join(", ")}`;
-    resultado.className = "incorrecto";
   }
+
+  // Revisar tareas opcionales
+  for (let i = 1; i <= 4; i++) {
+    const radios = document.getElementsByName(`tarea_opcional_${i}`);
+    const seleccionada = Array.from(radios).find(r => r.checked);
+
+    if (seleccionada && seleccionada.value === "no") {
+      alertas.push(`⚠️ Alerta, revisa tarea opcional ${i}`);
+    }
+  }
+
+  if (errores.length === 0 && alertas.length === 0) {
+    const correcto = document.createElement("div");
+    correcto.className = "correcto";
+    correcto.textContent = "✅ Correcto, se cumple todo";
+    resultado.appendChild(correcto);
+  } else {
+    for (const mensaje of errores) {
+      const div = document.createElement("div");
+      div.className = "incorrecto";
+      div.textContent = mensaje;
+      resultado.appendChild(div);
+    }
+
+    for (const mensaje of alertas) {
+      const div = document.createElement("div");
+      div.className = "alerta";
+      div.textContent = mensaje;
+      resultado.appendChild(div);
+    }
+  }
+}
+
+function mostrarInfo(mensaje) {
+    alert(mensaje);
 }
