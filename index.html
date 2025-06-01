@@ -1,64 +1,96 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <title>Datenschutzerklärung</title>
+  <title>EinfachDSGVO</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Checklist de Tareas</h1>
+  <h1>EinfachDSGVO</h1>
   <form>
-        <h2> Tareas obligatorias</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem repudiandae minus dolore ipsa quibusdam vitae dicta nihil nam ullam?
-        Ipsam error officiis nisi cumque quos sit saepe debitis cum dolor?</p>
+        <h2>Verpflichtende Angaben</h2>
+        <p>Kannst du anhand der vorliegenden Datenschutzerklärung folgende Fragen beantworten?
+            Es handelt sich hier um allgemein verpflichtende Angaben, die in jeder Datenschutzerklärung enthalten sein sollten.
+            </p>
     <div class="task" data-id="tarea1">
-        Tarea 1:
-        <label><input type="radio" name="tarea_obligatoria_1" value="si"> Sí</label>
-        <label><input type="radio" name="tarea_obligatoria_1" value="no"> No</label>
-        <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        Gibt es eine Person oder Stelle, die für die Daten verantwortlich ist?
+        <label><input type="radio" name="tarea_obligatoria_1" value="si"> Ja</label>
+        <label><input type="radio" name="tarea_obligatoria_1" value="no"> Nein</label>
+        <button type="button" onclick="abrirModal('Hinweis', 'Es muss klar sein, wer für den Umgang mit den Daten verantwortlich ist – also wer entscheidet, wie und warum die Daten verarbeitet werden (z.B. dein Unternehmen, für das du die Website betreibst)')">ℹ️</button>
     </div>
     <div class="task" data-id="tarea2">
-        Tarea 2:
-        <label><input type="radio" name="tarea_obligatoria_2" value="si"> Sí</label>
-        <label><input type="radio" name="tarea_obligatoria_2" value="no"> No</label>
-        <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        Gibt es einen oder mehrere Gründe dafür, warum die Daten verarbeitet werden?
+        <label><input type="radio" name="tarea_obligatoria_2" value="si"> Ja</label>
+        <label><input type="radio" name="tarea_obligatoria_2" value="no"> Nein</label>
+        <button type="button" onclick="abrirModal('Hinweis', 'Hier solltest du kurz beschreiben, zu welchen Zwecken die Daten verarbeitet werden. Personen dürfen ihre Daten nur für bestimmte, nachvollziehbare Zwecke zur Verfügung stellen. Eine Weiterverwendung für andere Zwecke ist nicht erlaubt.')">ℹ️</button>
     </div>
     <div class="task" data-id="tarea3">
-        Tarea 3:
-        <label><input type="radio" name="tarea_obligatoria_3" value="si"> Sí</label>
-        <label><input type="radio" name="tarea_obligatoria_3" value="no"> No</label>
-        <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        Gibt es eine rechtliche Grundlage, die die Datenverarbeitung erlaubt?
+        <label><input type="radio" name="tarea_obligatoria_3" value="si"> Ja</label>
+        <label><input type="radio" name="tarea_obligatoria_3" value="no"> Nein</label>
+        <button type="button" onclick="abrirModal('Hinweis', 'Daten dürfen nur verarbeitet werden, wenn es dafür eine gesetzliche Grundlage gibt – z. B. weil eine Einwilligung vorliegt oder ein Vertrag erfüllt werden muss.')">ℹ️</button>
     </div>
     <div class="task" data-id="tarea4">
-        Tarea 4:
-        <label><input type="radio" name="tarea_obligatoria_4" value="si"> Sí</label>
-        <label><input type="radio" name="tarea_obligatoria_4" value="no"> No</label>
-        <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+        Ist die Dauer der Datenspeicherung festgelegt?
+        <label><input type="radio" name="tarea_obligatoria_4" value="si"> Ja</label>
+        <label><input type="radio" name="tarea_obligatoria_4" value="no"> Nein</label>
+        <button type="button" onclick="abrirModal('Hinweis', 'Es sollte klar sein, wie lange Daten gespeichert werden. Daten dürfen nicht unbegrenzt aufbewahrt werden, sondern müssen nach einem bestimmten Zeitraum gelöscht werden.')">ℹ️</button>
     </div>
-
+    <div class="task" data-id="tarea5">
+        Werden die Betroffenen über ihre Rechte informiert?
+        <label><input type="radio" name="tarea_obligatoria_5" value="si"> Ja</label>
+        <label><input type="radio" name="tarea_obligatoria_5" value="no"> Nein</label>
+        <button type="button" onclick="abrirModal('Hinweis', 'Personen müssen wissen, was mit ihren Daten passiert und welche Rechte sie haben – z.B. das Recht auf Auskunft, Berichtigung oder Löschung.')">ℹ️</button>
+    </div>
+    <div class="task" data-id="tarea6">
+        Gibt es ein Beschwerderecht bei einer Aufsichtsbehörde?
+        <label><input type="radio" name="tarea_obligatoria_6" value="si"> Ja</label>
+        <label><input type="radio" name="tarea_obligatoria_6" value="no"> Nein</label>
+        <button type="button" onclick="abrirModal('Hinweis', 'Hier solltest du erklären, ob und wie Betroffene eine Beschwerde bei einer Datenschutzaufsichtsbehörde einreichen können. Wenn jemand glaubt, dass mit seinen Daten nicht korrekt umgegangen wird, muss er sich bei einer offiziellen Stelle beschweren können.')">ℹ️</button>
+    </div>
     <form>
-        <h2> Tareas Opcionales</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem repudiandae minus dolore ipsa quibusdam vitae dicta nihil nam ullam?
-            Ipsam error officiis nisi cumque quos sit saepe debitis cum dolor?</p>
+        <h2> Einzelfallbezogene Angaben</h2>
+        <p>Kannst Du anhand der vorliegenden Datenschutzerklärung folgende Fragen - falls zutreffend - beantworten?</p>
         <div class="task" data-id="tarea1">
-            Tarea 1:
-            <label><input type="radio" name="tarea_opcional_1" value="si"> Sí</label>
-            <label><input type="radio" name="tarea_opcional_1" value="na"> NA</label>
-            <label><input type="radio" name="tarea_opcional_1" value="no"> No</label>
-            <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+            Gibt es einen Datenschutzbeauftragten?
+            <label><input type="radio" name="tarea_opcional_1" value="si"> Ja</label>
+            <label><input type="radio" name="tarea_opcional_1" value="na"> Nicht anwendbar</label>
+            <label><input type="radio" name="tarea_opcional_1" value="no"> Nein</label>
+            <button type="button" onclick="abrirModal('Hinweis', 'In manchen Fällen ist ein Datenschutzbeauftragter gesetzlich vorgeschrieben. Diese Person kümmert sich darum, dass Datenschutzvorgaben eingehalten werden.')">ℹ️</button>
         </div>
         <div class="task" data-id="tarea2">
-            Tarea 2:
-            <label><input type="radio" name="tarea_opcional_2" value="si"> Sí</label>
-            <label><input type="radio" name="tarea_opcional_2" value="na"> NA</label>
-            <label><input type="radio" name="tarea_opcional_2" value="no"> No</label>
-            <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+            Gibt es einen Grund, warum die Daten verarbeitet werden, auch wenn keine Einwilligung vorliegt?
+            <label><input type="radio" name="tarea_opcional_2" value="si"> Ja</label>
+            <label><input type="radio" name="tarea_opcional_2" value="na"> Nicht anwendbar</label>
+            <label><input type="radio" name="tarea_opcional_2" value="no"> Nein</label>
+            <button type="button" onclick="abrirModal('Hinweis', 'Daten dürfen nur dann ohne Einwilligung verarbeitet werden, wenn es gesetzlich erlaubt ist – z.B. zur Vertragserfüllung oder weil ein berechtigtes Interesse vorliegt.')">ℹ️</button>
         </div>
         <div class="task" data-id="tarea3">
-            Tarea 3:
-            <label><input type="radio" name="tarea_opcional_3" value="si"> Sí</label>
-            <label><input type="radio" name="tarea_opcional_3" value="na"> NA</label>
-            <label><input type="radio" name="tarea_opcional_3" value="no"> No</label>
-            <button type="button" onclick="abrirModal('Tarea 1', 'Esta tarea implica completar el informe de seguridad.')">ℹ️</button>
+            Werden die Daten an andere Personen oder Firmen weitergegeben?
+            <label><input type="radio" name="tarea_opcional_3" value="si"> Ja</label>
+            <label><input type="radio" name="tarea_opcional_3" value="na"> Nicht anwendbar</label>
+            <label><input type="radio" name="tarea_opcional_3" value="no"> Nein</label>
+            <button type="button" onclick="abrirModal('Hinweis', 'Gemeint ist z.B., ob externe Dienstleister, Partnerunternehmen oder andere Stellen Zugriff auf die Daten erhalten.')">ℹ️</button>
+        </div>
+        <div class="task" data-id="tarea4">
+            Werden die Daten in ein Land außerhalb der EU geschickt?
+            <label><input type="radio" name="tarea_opcional_4" value="si"> Ja</label>
+            <label><input type="radio" name="tarea_opcional_4" value="na"> Nicht anwendbar</label>
+            <label><input type="radio" name="tarea_opcional_4" value="no"> Nein</label>
+            <button type="button" onclick="abrirModal('Hinweis', 'Wenn Daten in Länder außerhalb der EU übertragen werden, gelten besondere Regeln – z.B. müssen dort ähnliche Datenschutzstandards herrschen.')">ℹ️</button>
+        </div>
+        <div class="task" data-id="tarea5">
+            Müssen Benutzer ihre Daten unbedingt angeben, oder geht es auch ohne?
+            <label><input type="radio" name="tarea_opcional_5" value="si"> Ja</label>
+            <label><input type="radio" name="tarea_opcional_5" value="na"> Nicht anwendbar</label>
+            <label><input type="radio" name="tarea_opcional_5" value="no"> Nein</label>
+            <button type="button" onclick="abrirModal('Hinweis', 'Es muss klar sein, ob die Angabe von Daten verpflichtend ist – z.B. für einen Vertragsabschluss – oder freiwillig')">ℹ️</button>
+        </div>
+        <div class="task" data-id="tarea6">
+            Werden Entscheidungen automatisiert getroffen?
+            <label><input type="radio" name="tarea_opcional_6" value="si"> Ja</label>
+            <label><input type="radio" name="tarea_opcional_6" value="na"> Nicht anwendbar</label>
+            <label><input type="radio" name="tarea_opcional_6" value="no"> Nein</label>
+            <button type="button" onclick="abrirModal('Hinweis', 'Das betrifft z.B. automatisierte Entscheidungen durch Computerprogramme – etwa bei Kreditwürdigkeitsprüfungen oder Profilbildungen')">ℹ️</button>
         </div>
   </form>
 

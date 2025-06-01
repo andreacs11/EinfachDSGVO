@@ -6,7 +6,7 @@ function verificarTareas() {
   const alertas = [];
 
   // Revisar tareas obligatorias
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 6; i++) {
     const radios = document.getElementsByName(`tarea_obligatoria_${i}`);
     const seleccionada = Array.from(radios).find(r => r.checked);
 
@@ -16,7 +16,7 @@ function verificarTareas() {
   }
 
   // Revisar tareas opcionales
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 6; i++) {
     const radios = document.getElementsByName(`tarea_opcional_${i}`);
     const seleccionada = Array.from(radios).find(r => r.checked);
 
