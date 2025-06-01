@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+  }
+  
+  .task {
+    margin-bottom: 10px;
+  }
+  
+  .task input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  #resultado {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .correcto {
+    color: green;
+  }
+  
+  .incorrecto {
+    color: red;
+  }
