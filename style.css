@@ -70,3 +70,23 @@ body {
     font-weight: bold;
     cursor: pointer;
   }  
+
+  table {
+    border-collapse: collapse; /* evita espacios dobles entre bordes */
+    width: 100%;
+  }
+  td:first-child, th:first-child {
+    white-space: nowrap;
+    width: 150px; /* puedes ajustar este valor */
+  }
+
+  th, td {
+    padding: 10px; /* aquí se define el espacio entre borde y texto */
+    text-align: left;
+    border: none;      /* Quita los bordes */
+
+  }
+
+  thead {
+    background-color: #f2f2f2;
+  }

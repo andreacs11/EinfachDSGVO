@@ -9,104 +9,175 @@
   <form>
         <h2>Verpflichtende Angaben</h2>
         <p>Kannst du anhand der vorliegenden Datenschutzerklärung folgende Fragen beantworten?
-            Es handelt sich hier um allgemein verpflichtende Angaben, die in jeder Datenschutzerklärung enthalten sein sollten.
+            Es handelt sich hier um <b>allgemein verpflichtende Angaben</b>, <u>die in jeder Datenschutzerklärung enthalten sein sollten</u>.
             </p>
-    <div class="anforderung" data-id="anforderung1">
-        <label><input type="radio" name="verpflichtende_angabe_1" value="ja"> Ja</label>
-        <label><input type="radio" name="verpflichtende_angabe_1" value="nein"> Nein</label>
-        <span style="display: inline-block; width: 4ch;"></span>
-        Gibt es eine Person oder Stelle, die für die Daten verantwortlich ist?
-        <button type="button" onclick="modalOeffnen('Hinweis', 'Es muss deutlich sein, wer darüber entscheidet, was mit den Daten passiert – also z.B. das Unternehmen, das die Website betreibt. Der Name und die Kontaktdaten dieser Stelle müssen genannt werden, damit man sich bei Fragen oder Problemen direkt dorthin wenden kann.')">ℹ️</button>
-    </div>
-    <div class="anforderung" data-id="anforderung2">
-        <label><input type="radio" name="verpflichtende_angabe_2" value="ja"> Ja</label>
-        <label><input type="radio" name="verpflichtende_angabe_2" value="nein"> Nein</label>
-        <span style="display: inline-block; width: 4ch;"></span>
-        Gibt es einen oder mehrere Gründe dafür, warum die Daten verarbeitet werden?
-        <button type="button" onclick="modalOeffnen('Hinweis', 'Es sollte kurz und verständlich erklärt werden, wofür die Daten verwendet werden – z.B. um ein Kontaktformular zu beantworten oder einen Newsletter zu verschicken. Die Daten dürfen nur für diese klaren Zwecke genutzt werden – und nicht für andere, ohne Zustimmung.')">ℹ️</button>
-    </div>
-    <div class="anforderung" data-id="anforderung3">
-        <label><input type="radio" name="verpflichtende_angabe_3" value="ja"> Ja</label>
-        <label><input type="radio" name="verpflichtende_angabe_3" value="nein"> Nein</label>
-        <span style="display: inline-block; width: 4ch;"></span>
-        Gibt es eine rechtliche Grundlage, die die Datenverarbeitung erlaubt?
-        <button type="button" onclick="modalOeffnen('Hinweis', 'Daten dürfen nur verarbeitet werden, wenn es eine Erlaubnis dafür gibt – z.B., weil man vorher zugestimmt hat oder weil es für einen Vertrag notwendig ist.')">ℹ️</button>
-    </div>
-    <div class="anforderung" data-id="anforderung4">
-        <label><input type="radio" name="verpflichtende_angabe_4" value="ja"> Ja</label>
-        <label><input type="radio" name="verpflichtende_angabe_4" value="nein"> Nein</label>
-        <span style="display: inline-block; width: 4ch;"></span>
-        Ist die Dauer der Datenspeicherung festgelegt?
-        <button type="button" onclick="modalOeffnen('Hinweis', 'Es muss angegeben werden, wie lange die Daten aufbewahrt werden. Sie dürfen nicht für immer gespeichert bleiben, sondern müssen nach einer bestimmten Zeit gelöscht werden.')">ℹ️</button>
-    </div>
-    <div class="anforderung" data-id="anforderung5">
-        <label><input type="radio" name="verpflichtende_angabe_5" value="ja"> Ja</label>
-        <label><input type="radio" name="verpflichtende_angabe_5" value="nein"> Nein</label>
-        <span style="display: inline-block; width: 4ch;"></span>
-        Werden die Betroffenen über ihre Rechte informiert?
-        <button type="button" onclick="modalOeffnen('Hinweis', 'Personen müssen wissen, was mit ihren Daten passiert und welche Rechte sie dabei haben – z.B. das Recht zu erfahren, welche Daten gespeichert wurden, falsche Angaben zu korrigieren oder die Daten löschen zu lassen.')">ℹ️</button>
-    </div>
-    <div class="anforderung" data-id="anforderung6">
-        <label><input type="radio" name="verpflichtende_angabe_6" value="ja"> Ja</label>
-        <label><input type="radio" name="verpflichtende_angabe_6" value="nein"> Nein</label>
-        <span style="display: inline-block; width: 4ch;"></span>
-        Gibt es eine Beschwerdemöglichkeit?
-        <button type="button" onclick="modalOeffnen('Hinweis', 'Es sollte erklärt werden, wo man sich beschweren kann, wenn man glaubt, dass mit den eigenen Daten nicht richtig umgegangen wurde – z.B. bei einer offiziellen Datenschutzbehörde.')">ℹ️</button>
-    </div>
+    <table border="1">
+        <tbody>
+            <div class="anforderung" data-id="anforderung1">
+                <tr>
+                    <td>
+                        <label><input type="radio" name="verpflichtende_angabe_1" value="ja"> Ja</label>
+                        <label><input type="radio" name="verpflichtende_angabe_1" value="nein"> Nein</label>
+                    </td>
+                    <td>
+                        1. Gibt es eine Person oder Stelle, die für die Daten verantwortlich ist?
+                        <button type="button" onclick="modalOeffnen('Hinweis', 'Es muss deutlich sein, wer darüber entscheidet, was mit den Daten passiert – also z.B. das Unternehmen, das die Website betreibt. Der Name und die Kontaktdaten dieser Stelle müssen genannt werden, damit man sich bei Fragen oder Problemen direkt dorthin wenden kann.')">ℹ️</button>
+                    </td>
+                </tr>
+            </div>
+            <div class="anforderung" data-id="anforderung2">
+                <tr>
+                    <td>
+                        <label><input type="radio" name="verpflichtende_angabe_2" value="ja"> Ja</label>
+                        <label><input type="radio" name="verpflichtende_angabe_2" value="nein"> Nein</label>
+                    </td>
+                    <td>
+                        2. Gibt es einen oder mehrere Gründe dafür, warum die Daten verarbeitet werden?
+                        <button type="button" onclick="modalOeffnen('Hinweis', 'Es sollte kurz und verständlich erklärt werden, wofür die Daten verwendet werden – z.B. um ein Kontaktformular zu beantworten oder einen Newsletter zu verschicken. Die Daten dürfen nur für diese klaren Zwecke genutzt werden – und nicht für andere, ohne Zustimmung.')">ℹ️</button>
+                    </td>
+                </tr>
+            </div>
+            <div class="anforderung" data-id="anforderung3">
+                <tr>
+                    <td>
+                        <label><input type="radio" name="verpflichtende_angabe_3" value="ja"> Ja</label>
+                        <label><input type="radio" name="verpflichtende_angabe_3" value="nein"> Nein</label>
+                    </td>
+                    <td>
+                        3. Gibt es eine rechtliche Grundlage, die die Datenverarbeitung erlaubt?
+                        <button type="button" onclick="modalOeffnen('Hinweis', 'Daten dürfen nur verarbeitet werden, wenn es eine Erlaubnis dafür gibt – z.B., weil man vorher zugestimmt hat oder weil es für einen Vertrag notwendig ist.')">ℹ️</button>
+                    </td>
+                </tr>
+            </div>
+            <div class="anforderung" data-id="anforderung4">
+                <tr>
+                    <td>
+                        <label><input type="radio" name="verpflichtende_angabe_4" value="ja"> Ja</label>
+                        <label><input type="radio" name="verpflichtende_angabe_4" value="nein"> Nein</label>
+                    </td>
+                    <td>
+                        4. Ist die Dauer der Datenspeicherung festgelegt?
+                        <button type="button" onclick="modalOeffnen('Hinweis', 'Es muss angegeben werden, wie lange die Daten aufbewahrt werden. Sie dürfen nicht für immer gespeichert bleiben, sondern müssen nach einer bestimmten Zeit gelöscht werden.')">ℹ️</button>
+                    </td>
+                </tr>
+            </div>
+            <div class="anforderung" data-id="anforderung5">
+                <tr>
+                    <td>
+                        <label><input type="radio" name="verpflichtende_angabe_5" value="ja"> Ja</label>
+                        <label><input type="radio" name="verpflichtende_angabe_5" value="nein"> Nein</label>
+                    </td>
+                    <td>
+                        5. Werden die Betroffenen über ihre Rechte informiert?
+                        <button type="button" onclick="modalOeffnen('Hinweis', 'Personen müssen wissen, was mit ihren Daten passiert und welche Rechte sie dabei haben – z.B. das Recht zu erfahren, welche Daten gespeichert wurden, falsche Angaben zu korrigieren oder die Daten löschen zu lassen.')">ℹ️</button>
+                    </td>
+                </tr>
+            </div>
+            <div class="anforderung" data-id="anforderung6">
+                <tr>
+                    <td>
+                        <label><input type="radio" name="verpflichtende_angabe_6" value="ja"> Ja</label>
+                        <label><input type="radio" name="verpflichtende_angabe_6" value="nein"> Nein</label>
+                    </td>
+                    <td>
+                        6. Gibt es eine Beschwerdemöglichkeit?
+                        <button type="button" onclick="modalOeffnen('Hinweis', 'Es sollte erklärt werden, wo man sich beschweren kann, wenn man glaubt, dass mit den eigenen Daten nicht richtig umgegangen wurde – z.B. bei einer offiziellen Datenschutzbehörde.')">ℹ️</button>
+                    </td>
+                </tr>
+            </div>
+        </tbody>
+    </table>
+
     <form>
         <h2> Einzelfallbezogene Angaben</h2>
-        <p>Kannst Du anhand der vorliegenden Datenschutzerklärung folgende Fragen - falls zutreffend - beantworten? Diese Angaben solltest du nur dann in deiner Datenschutzerklärung aufnehmen, wenn sie für dich relevant sind.</p>
-        <div class="anforderung" data-id="anforderung1">
-            <label><input type="radio" name="einzelfallbezogene_angabe_1" value="ja"> Ja</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_1" value="na"> Nicht anwendbar</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_1" value="nein"> Nein</label>
-            <span style="display: inline-block; width: 4ch;"></span>
-            Gibt es einen Datenschutzbeauftragten?
-            <button type="button" onclick="modalOeffnen('Hinweis', 'In bestimmten Fällen wird eine Person benannt, die darauf achtet, dass die Datenschutzregeln eingehalten werden. Diese Person nennt man Datenschutzbeauftragter.')">ℹ️</button>
-        </div>
-        <div class="anforderung" data-id="anforderung2">
-            <label><input type="radio" name="einzelfallbezogene_angabe_2" value="ja"> Ja</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_2" value="na"> Nicht anwendbar</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_2" value="nein"> Nein</label>
-        <span style="display: inline-block; width: 4ch;"></span>
-            Gibt es einen Grund, warum die Daten verarbeitet werden, auch wenn keine Einwilligung vorliegt?
-            <button type="button" onclick="modalOeffnen('Hinweis', 'Daten dürfen nur ohne Zustimmung verarbeitet werden, wenn das Gesetz es ausdrücklich erlaubt – z.B., weil ein sogenanntes „berechtigtes Interesse“ besteht, das schwerer wiegt als der Schutz der Daten.')">ℹ️</button>
-        </div>
-        <div class="anforderung" data-id="anforderung5">
-            <label><input type="radio" name="einzelfallbezogene_angabe_5" value="ja"> Ja</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_5" value="na"> Nicht anwendbar</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_5" value="nein"> Nein</label>
-        <span style="display: inline-block; width: 4ch;"></span>
-            Nur wenn die Verarbeitung personenbezogener Daten auf einem berechtigten Interesse beruht (siehe dazu Frage 2): Wird die Verpflichtung zur Bereitstellung bestimmter personenbezogener Daten sowie die möglichen Folgen einer Nichtbereitstellung deutlich angegeben?
-            <button type="button" onclick="modalOeffnen('Hinweis', 'Wenn du dich auf ein berechtigtes Interesse stützt, musst du offen und verständlich erklären, welche Daten die Nutzer unbedingt angeben müssen – zum Beispiel, weil es gesetzlich vorgeschrieben ist (wie bei Steuer- oder Meldepflichten) oder weil du die Daten für einen Vertragsabschluss brauchst (z. B. Lieferadresse). Außerdem musst du sagen, was passiert, wenn Nutzer die Daten nicht geben, z.B., dass sie dann keinen Vertrag abschließen oder keine Lieferung erhalten können.')">ℹ️</button>
-        </div>
-        <div class="anforderung" data-id="anforderung3">
-            <label><input type="radio" name="einzelfallbezogene_angabe_3" value="ja"> Ja</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_3" value="na"> Nicht anwendbar</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_3" value="nein"> Nein</label>
-        <span style="display: inline-block; width: 4ch;"></span>
-            Werden die Daten an andere Personen oder Firmen weitergegeben?
-            <button type="button" onclick="modalOeffnen('Hinweis', 'Gemeint ist z.B., ob externe Dienstleister, Partnerunternehmen oder andere Stellen Zugriff auf die Daten erhalten.')">ℹ️</button>
-        </div>
-        <div class="anforderung" data-id="anforderung4">
-            <label><input type="radio" name="einzelfallbezogene_angabe_4" value="ja"> Ja</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_4" value="na"> Nicht anwendbar</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_4" value="nein"> Nein</label>
-        <span style="display: inline-block; width: 4ch;"></span>
-            Werden die Daten in ein Land außerhalb der EU geschickt?
-            <button type="button" onclick="modalOeffnen('Hinweis', 'Wenn Daten in Länder außerhalb der EU übertragen werden, gelten besondere Regeln – z.B. müssen dort ähnliche Datenschutzstandards herrschen.')">ℹ️</button>
-        </div>
-        <div class="anforderung" data-id="anforderung6">
-            <label><input type="radio" name="einzelfallbezogene_angabe_6" value="ja"> Ja</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_6" value="na"> Nicht anwendbar</label>
-            <label><input type="radio" name="einzelfallbezogene_angabe_6" value="nein"> Nein</label>
-        <span style="display: inline-block; width: 4ch;"></span>
-            Werden Entscheidungen automatisiert getroffen?
-            <button type="button" onclick="modalOeffnen('Hinweis', 'Das betrifft z.B. automatisierte Entscheidungen durch Computerprogramme – etwa bei Kreditwürdigkeitsprüfungen oder Profilbildungen.')">ℹ️</button>
-        </div>
+        <p>Kannst Du anhand der vorliegenden Datenschutzerklärung folgende Fragen - <b>falls zutreffend</b> - beantworten? Diese Angaben solltest du nur dann in deiner Datenschutzerklärung aufnehmen, wenn sie für dich relevant sind.</p>
+        <table border="1">
+            <tbody>
+                <div class="anforderung" data-id="anforderung1">
+                    <tr>
+                        <td>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_1" value="ja"> Ja</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_1" value="na"> Nicht anwendbar</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_1" value="nein"> Nein</label>
+                        </td>
+                        <td>
+                            1. Gibt es einen Datenschutzbeauftragten?
+                            <button type="button" onclick="modalOeffnen('Hinweis', 'In bestimmten Fällen wird eine Person benannt, die darauf achtet, dass die Datenschutzregeln eingehalten werden. Diese Person nennt man Datenschutzbeauftragter.')">ℹ️</button>
+                        </td>
+                    </tr>
+                </div>
+
+                <div class="anforderung" data-id="anforderung2">
+                    <tr>
+                        <td>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_2" value="ja"> Ja</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_2" value="na"> Nicht anwendbar</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_2" value="nein"> Nein</label>
+                        </td>
+                        <td>
+                            2. Gibt es einen Grund, warum die Daten verarbeitet werden, auch wenn keine Einwilligung vorliegt?
+                            <button type="button" onclick="modalOeffnen('Hinweis', 'Daten dürfen nur ohne Zustimmung verarbeitet werden, wenn das Gesetz es ausdrücklich erlaubt – z.B., weil ein sogenanntes „berechtigtes Interesse“ besteht, das schwerer wiegt als der Schutz der Daten.')">ℹ️</button>
+                        </td>
+                    </tr>
+                </div>
+                <div class="anforderung" data-id="anforderung3">
+                    <tr>
+                        <td>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_3" value="ja"> Ja</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_3" value="na"> Nicht anwendbar</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_3" value="nein"> Nein</label>
+                        </td>
+                        <td>
+                            3. Nur wenn die Verarbeitung personenbezogener Daten auf einem berechtigten Interesse beruht (siehe dazu Frage 2): Wird die Verpflichtung zur Bereitstellung bestimmter personenbezogener Daten sowie die möglichen Folgen einer Nichtbereitstellung deutlich angegeben?
+                            <button type="button" onclick="modalOeffnen('Hinweis', 'Wenn du dich auf ein berechtigtes Interesse stützt, musst du offen und verständlich erklären, welche Daten die Nutzer unbedingt angeben müssen – zum Beispiel, weil es gesetzlich vorgeschrieben ist (wie bei Steuer- oder Meldepflichten) oder weil du die Daten für einen Vertragsabschluss brauchst (z. B. Lieferadresse). Außerdem musst du sagen, was passiert, wenn Nutzer die Daten nicht geben, z.B., dass sie dann keinen Vertrag abschließen oder keine Lieferung erhalten können.')">ℹ️</button>
+                        </td>
+                    </tr>
+                </div>
+                <div class="anforderung" data-id="anforderung4">
+                    <tr>
+                        <td>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_4" value="ja"> Ja</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_4" value="na"> Nicht anwendbar</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_4" value="nein"> Nein</label>
+                        </td>
+                        <td>
+                            4. Werden die Daten an andere Personen oder Firmen weitergegeben?
+                            <button type="button" onclick="modalOeffnen('Hinweis', 'Gemeint ist z.B., ob externe Dienstleister, Partnerunternehmen oder andere Stellen Zugriff auf die Daten erhalten.')">ℹ️</button>
+                        </td>
+                    </tr>
+                </div>
+
+                <div class="anforderung" data-id="anforderung5">
+                    <tr>
+                        <td>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_5" value="ja"> Ja</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_5" value="na"> Nicht anwendbar</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_5" value="nein"> Nein</label>
+                        </td>
+                        <td>
+                            5. Werden die Daten in ein Land außerhalb der EU geschickt?
+                            <button type="button" onclick="modalOeffnen('Hinweis', 'Wenn Daten in Länder außerhalb der EU übertragen werden, gelten besondere Regeln – z.B. müssen dort ähnliche Datenschutzstandards herrschen.')">ℹ️</button>
+                        </td>
+                    </tr>
+                </div>
+                <div class="anforderung" data-id="anforderung6">
+                    <tr>
+                        <td>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_6" value="ja"> Ja</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_6" value="na"> Nicht anwendbar</label>
+                            <label><input type="radio" name="einzelfallbezogene_angabe_6" value="nein"> Nein</label>
+                        </td>
+                        <td>
+                            6. Werden Entscheidungen automatisiert getroffen?
+                            <button type="button" onclick="modalOeffnen('Hinweis', 'Das betrifft z.B. automatisierte Entscheidungen durch Computerprogramme – etwa bei Kreditwürdigkeitsprüfungen oder Profilbildungen.')">ℹ️</button>
+                        </td>
+                    </tr>
+                </div>
+        </tbody>
+    </table>
   </form>
 
-  <button onclick="aufgabenBestaetigen()">Verificar</button>
+  <button onclick="aufgabenBestaetigen()">Prüfen</button>
 
   <div id="ergebnis"></div>
 
