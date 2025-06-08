@@ -10,7 +10,8 @@ function aufgabenBestaetigen() {
     const ausgewaehlt = Array.from(radios).find(r => r.checked);
 
     if (ausgewaehlt && ausgewaehlt.value === "nein") {
-      fehler.push(`❌ Error en la tarea obligatoria ${i}`); // TODO: translate
+      fehler.push(`❌ Achtung! Die zentrale Pflichtangabe ${i} wurde mit „Nein“ beantwortet.
+        Das bedeutet, dass deine Datenschutzerklärung aktuell nicht vollständig im Sinne der DSGVO ist.`);
     }
   }
 
@@ -19,14 +20,15 @@ function aufgabenBestaetigen() {
     const ausgewaehlt = Array.from(radios).find(r => r.checked);
 
     if (ausgewaehlt && ausgewaehlt.value === "nein") {
-      warnings.push(`⚠️ Alerta, revisa tarea opcional ${i}`); // TODO: translate
+      warnings.push(`⚠️ Hinweis: Die kontextabhängige Frage ${i} wurde mit „Nein“ beantwortet.
+        Diese Angaben sind nicht in jedem Fall erforderlich, können aber bei bestimmten Verarbeitungsvorgängen verpflichtend sein.`);
     }
   }
 
   if (fehler.length === 0 && warnings.length === 0) {
     const richtig = document.createElement("div");
     richtig.className = "richtig";
-    richtig.textContent = "✅ Correcto, se cumple todo"; // TODO: translate
+    richtig.textContent = "✅ Glückwunsch! Alle Pflichtangaben wurden bejaht und bei den kontextabhängigen Fragen liegt entweder ein „Ja“ oder ein „Nicht anwendbar“ vor.\n\nDeine Datenschutzerklärung erfüllt die zentralen Anforderungen der DSGVO - zumindest aus Sicht der hier geprüften Punkte.\nBehalte deine Datenschutzerklärung im Blick, wenn sich Funktionen oder Datenflüsse auf deiner Website ändern. Datenschutz ist eine laufende Aufgabe.  "; // TODO: translate
     ergebnis.appendChild(richtig);
   } else {
     for (const nachricht of fehler) {

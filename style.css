@@ -19,6 +19,7 @@ body {
   .richtig {
     color: green;
     font-weight: bold;
+    white-space: pre-line;
   }
   
   .falsch {
