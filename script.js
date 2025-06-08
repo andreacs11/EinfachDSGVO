@@ -48,9 +48,9 @@ function aufgabenBestaetigen() {
 function modalOeffnen(titel, text) {
     document.getElementById("modal-titel").textContent = titel;
     document.getElementById("modal-text").textContent = text;
-    document.getElementById("miModal").style.display = "block";
+    document.getElementById("meinModal").style.display = "block";
   }
   
 function modalSchliessen() {
-document.getElementById("miModal").style.display = "none";
+document.getElementById("meinModal").style.display = "none";
 }
