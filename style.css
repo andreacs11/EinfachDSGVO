@@ -3,30 +3,30 @@ body {
     margin: 2rem;
   }
   
-  .task {
+  .anforderung {
     margin-bottom: 10px;
   }
   
-  .task input[type="checkbox"] {
+  .anforderung input[type="checkbox"] {
     margin-right: 10px;
   }
   
-  #resultado {
+  #ergebnis {
     margin-top: 20px;
     font-weight: bold;
   }
   
-  .correcto {
+  .richtig {
     color: green;
     font-weight: bold;
   }
   
-  .incorrecto {
+  .falsch {
     color: red;
     font-weight: bold;
   }
   
-  .alerta {
+  .warning {
     color: orange;
     font-weight: bold;
   }
@@ -62,7 +62,7 @@ body {
     box-shadow: 0px 0px 10px #000;
   }
   
-  .cerrar {
+  .schliessen {
     color: #aaa;
     float: right;
     font-size: 28px;

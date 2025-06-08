@@ -1,58 +1,56 @@
-function verificarTareas() {
-  const resultado = document.getElementById("resultado");
-  resultado.innerHTML = ""; // Limpiar mensajes anteriores
+function aufgabenBestaetigen() {
+  const ergebnis = document.getElementById("ergebnis");
+  ergebnis.innerHTML = "";
 
-  const errores = [];
-  const alertas = [];
+  const fehler = [];
+  const warnings = [];
 
-  // Revisar tareas obligatorias
   for (let i = 1; i <= 6; i++) {
-    const radios = document.getElementsByName(`tarea_obligatoria_${i}`);
-    const seleccionada = Array.from(radios).find(r => r.checked);
+    const radios = document.getElementsByName(`verpflichtende_angabe_${i}`);
+    const ausgewaehlt = Array.from(radios).find(r => r.checked);
 
-    if (seleccionada && seleccionada.value === "no") {
-      errores.push(`❌ Error en la tarea obligatoria ${i}`);
+    if (ausgewaehlt && ausgewaehlt.value === "nein") {
+      fehler.push(`❌ Error en la tarea obligatoria ${i}`); // TODO: translate
     }
   }
 
-  // Revisar tareas opcionales
   for (let i = 1; i <= 6; i++) {
-    const radios = document.getElementsByName(`tarea_opcional_${i}`);
-    const seleccionada = Array.from(radios).find(r => r.checked);
+    const radios = document.getElementsByName(`einzelfallbezogene_angabe_${i}`);
+    const ausgewaehlt = Array.from(radios).find(r => r.checked);
 
-    if (seleccionada && seleccionada.value === "no") {
-      alertas.push(`⚠️ Alerta, revisa tarea opcional ${i}`);
+    if (ausgewaehlt && ausgewaehlt.value === "nein") {
+      warnings.push(`⚠️ Alerta, revisa tarea opcional ${i}`); // TODO: translate
     }
   }
 
-  if (errores.length === 0 && alertas.length === 0) {
-    const correcto = document.createElement("div");
-    correcto.className = "correcto";
-    correcto.textContent = "✅ Correcto, se cumple todo";
-    resultado.appendChild(correcto);
+  if (fehler.length === 0 && warnings.length === 0) {
+    const richtig = document.createElement("div");
+    richtig.className = "richtig";
+    richtig.textContent = "✅ Correcto, se cumple todo"; // TODO: translate
+    ergebnis.appendChild(richtig);
   } else {
-    for (const mensaje of errores) {
+    for (const nachricht of fehler) {
       const div = document.createElement("div");
-      div.className = "incorrecto";
-      div.textContent = mensaje;
-      resultado.appendChild(div);
+      div.className = "falsch";
+      div.textContent = nachricht;
+      ergebnis.appendChild(div);
     }
 
-    for (const mensaje of alertas) {
+    for (const nachricht of warnings) {
       const div = document.createElement("div");
-      div.className = "alerta";
-      div.textContent = mensaje;
-      resultado.appendChild(div);
+      div.className = "warning";
+      div.textContent = nachricht;
+      ergebnis.appendChild(div);
     }
   }
 }
 
-function abrirModal(titulo, texto) {
-    document.getElementById("modal-titulo").textContent = titulo;
-    document.getElementById("modal-texto").textContent = texto;
+function modalOeffnen(titel, text) {
+    document.getElementById("modal-titel").textContent = titel;
+    document.getElementById("modal-text").textContent = text;
     document.getElementById("miModal").style.display = "block";
   }
   
-function cerrarModal() {
+function modalSchliessen() {
 document.getElementById("miModal").style.display = "none";
 }
